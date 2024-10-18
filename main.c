@@ -1,11 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <locale.h>
 #include "usuario.h"
 #include "passagem.h"
 #include "reserva.h"
 
 int main() {
+    setlocale(LC_ALL, "Portuguese");
+     printf("Seja bem-vindo(a) à nossa plataforma de viagens rodoviárias. Explore, reserve e viaje com conforto!\n");
     Usuario *usuarios = carregarUsuarios();
     Passagem *passagens = carregarPassagens();
     Reserva *reservas = carregarReservas();
